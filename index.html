@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>星球任务站 · Orbit</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<header><a class="brand" href="./">✦ ORBIT <span>星球任务站</span></a><span class="status">● 本地航行模式</span></header>
+<main>
+<section class="intro"><div class="eyebrow">YOUR SMALL STEPS, A BIG UNIVERSE</div><h1>今天，也向前<br>探索一点点。</h1><p>把想做的事写下来。专注一会儿，再点亮一颗星。</p></section>
+<section class="dashboard" aria-label="任务控制台">
+<div class="mission panel"><div class="section-heading"><h2>探索清单</h2><span id="count">0 项待出发</span></div>
+<form id="task-form"><label class="sr-only" for="task-input">新任务</label><input id="task-input" maxlength="120" placeholder="下一步，你想探索什么？" autocomplete="off" required><button class="add" type="submit" aria-label="添加任务">＋</button></form>
+<div class="filters" role="group" aria-label="筛选任务"><button class="active" data-filter="all" aria-pressed="true">全部</button><button data-filter="pending" aria-pressed="false">待探索</button><button data-filter="done" aria-pressed="false">已完成</button></div>
+<ul id="tasks"></ul><p id="empty" class="empty">宇宙很大，从一个小任务开始。<br><span>例如：读 10 页书、散步、写下一个灵感。</span></p>
+<div class="mission-footer"><span>数据只保存在当前浏览器</span><button id="clear">清理已完成</button></div></div>
+<aside><section class="planet-card panel"><div class="eyebrow">EXPLORATION ENERGY</div><div class="planet" aria-hidden="true"><div class="ring"></div><div class="sphere"></div><span class="satellite">✦</span></div><h2 id="level">初航者</h2><p><strong id="energy">0</strong> 能量 · 每完成一项 +10</p><div class="progress"><div id="progress"></div></div><p id="next-level" class="small">距离下一等级还需 50 能量</p></section>
+<section class="timer-card panel"><div class="section-heading"><h2>专注舱</h2><label class="duration-label">时长 <select id="duration" aria-label="专注时长"><option value="15">15 分钟</option><option value="25" selected>25 分钟</option><option value="45">45 分钟</option></select></label></div><div id="time" class="time" role="timer">25:00</div><p id="timer-status">一次只探索一件事</p><div class="timer-actions"><button id="toggle-timer" class="primary">开始专注</button><button id="reset-timer">重置</button></div><p id="timer-announcement" class="sr-only" aria-live="polite"></p></section></aside>
+</section><p id="notice" role="status" aria-live="polite"></p>
+<footer>不必一次抵达。每一个小步，都算数。 <span>BUILT FOR YOUR OWN ORBIT</span></footer>
+</main><script src="app.js" defer></script></body></html>
