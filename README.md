@@ -29,3 +29,9 @@ python3 -m http.server 8000 --bind 127.0.0.1
 纯 HTML / CSS / JavaScript，无构建流程。也可部署到支持静态文件的网站服务，例如 GitHub Pages（从 main 分支根目录发布）。
 
 计时器刷新后会重置，关闭网页后不会发送通知；应用不会上传你的任务数据。
+
+## 新项目：造物指南
+
+[Codex 零基础项目指南](codex-guide/README.md)：从想法到上线的 8 步流程、可复制提问模板、28 个常见问答和术语解释。
+
+启动同一个静态服务器后，在自己的浏览器打开 `/codex-guide/` 路径；也可直接阅读 [完整文字教程](codex-guide/GUIDE.md)。星球任务站仍在仓库根目录。
